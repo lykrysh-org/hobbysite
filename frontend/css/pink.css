@@ -1,0 +1,137 @@
+#showbox {
+ display: none;
+ background: var(--blck);
+}
+
+#logo {
+ z-index: 1000;
+ position: fixed;
+ left: calc(50% - 1rem); 
+ top: 1.5rem;
+ -webkit-transition: -webkit-transform .4s ease-in-out;
+ transition: transform .4s ease-in-out;   
+}
+#logo:hover {
+ -webkit-transition: rotate(-5deg);
+ transform: rotate(-5deg);
+}
+#logo.rot {
+ -webkit-transition: rotate(90deg);
+ transform: rotate(90deg);
+}
+
+#logo img {
+ width: 2rem; height: 2rem;
+ outline: none; border: none;
+}
+#navbk {
+ display: none;
+ z-index: 998;
+ top: 0;
+ background: transparent;
+ cursor:not-allowed;
+}
+#nav {
+ z-index: 999;
+ position: fixed;
+ top: 0;
+ height: calc(100vh - 6.2rem);
+ overflow-x: hidden;
+ overflow-y: auto;
+ padding-top: 6.2rem;
+ background: var(--red0); 
+ color: var(--blck);
+ -webkit-transition: all 0.4s ease-in-out; 
+ transition: all 0.4s ease-in-out;
+ left: calc(50% - 0rem); 
+ width: 0rem; 
+}
+#nav.on {
+ width: 14.5rem; 
+ left: calc(50% - 7.25rem); 
+}
+#nav small {
+
+}
+#nav #hiding {
+ display: none;
+ width: 100%;
+ float: left;
+ margin-left: 1.5rem;
+}
+
+#nav form input[type="text"] {
+ font-size: 16px;
+ border-bottom: 2px dashed var(--blck);
+ margin-bottom: 33px;
+}
+
+#nav form input[type="text"]::-webkit-input-placeholder { color: var(--red2) }
+#nav form input[type="text"]::-moz-placeholder { color: var(--red2) }
+#nav form input[type="text"]:-moz-placeholder { color: var(--red2) }
+#nav form input[type="text"]:-ms-input-placeholder { color: var(--red2) }
+#nav form input[type="text"]::placeholder { color: var(--red2); opacity: 1; }
+
+#nav small .blck {
+ font-size: 32px;
+ line-height: 45px;
+}
+#nav small .blck a {
+ text-decoration: none;
+ color: var(--blck); 
+}
+#nav small .blck a:hover {
+ background: var(--red2); 
+}
+#nav small .whit {
+
+}
+#nav small .whit a {
+ text-decoration: none;
+ color: var(--whit); 
+}
+#nav small .whit a:hover {
+ background: var(--red5); 
+}
+
+#dummy {
+ pointer-events:none; 
+ z-index: 995;
+ top: 0;
+}
+#dummy #bugbug {
+ -webkit-transition: background-color 0.3s ease-out; 
+ transition: background-color 0.3s ease-out;
+ background-color: var(--red0);
+ color: var(--whit);
+ height: 100vh; 
+ width: calc(100% - 4rem);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ text-align: center;
+ padding: 0 2rem;
+}
+#dummy #bugbug:empty {
+ background: none;
+}
+#dummy #bugbug img {
+ margin-bottom: 1rem;
+ width: 48px;
+ height: 48px;
+}
+#dummy #bugbug p {
+ margin-bottom: 8rem;
+ line-height: 3rem;
+}
+#dummy #bugbug p .mini{
+ width: 1.8rem; height: 1.6rem;
+}
+#dummy #bugbug p .id{
+ vertical-align: -23px;
+ margin-right: 6px;
+}
+#dummy #bugbug p .key{
+ vertical-align: -23px;
+ margin-right: 8px;
+}

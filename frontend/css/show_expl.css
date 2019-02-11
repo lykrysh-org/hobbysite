@@ -1,0 +1,373 @@
+body {
+ background: var(--whit); 
+ color: var(--blck); 
+}
+.but {
+ color: var(--bsod); 
+ background: var(--red1); 
+}
+.but:hover {
+ color: var(--blck); 
+ background: var(--red2); 
+}
+
+/* THUMBNAILS*/
+
+.b {
+  background: none;
+  width: calc(100% - 3.1rem);
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-top: 72px;
+  margin-bottom: 3rem;
+  min-height: 100vh; 
+}
+.b .z {
+  display: grid;
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr));
+  justify-content: left;
+  align-content: left;
+  width: calc(100% - 0px);
+}
+.b .z .e {
+  border: 0;
+  vertical-align: top;
+  text-align: left;
+  padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0rem;
+
+}
+.b .z .e .trans {
+  height: 0;
+}
+.b .z .e p {
+  font-size: 13px;
+  line-height: 21px;
+}
+.b .z .e small {
+  font-size: 13px;
+  line-height: 21px;
+}
+
+.clk {
+}
+.clk a { text-decoration: none; }
+.clk p {
+  color: #666;
+  margin-top:0.6rem;
+  margin-bottom: 0.1rem;
+}
+.clk .edges img {
+  width: 100%; 
+  -webkit-filter: contrast(150%) brightness(60%) grayscale(100%); 
+  filter: contrast(150%) brightness(60%) grayscale(100%);
+}
+
+.clk .container {
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.clk .container:hover img {
+  -webkit-filter: brightness(70%); 
+  filter: brightness(70%);
+}
+
+.clk small {
+}
+.clk .intro {
+ color: #555;
+ display: inline-block;
+ word-break: break-all;
+}
+
+.limited {
+ pointer-events:none; 
+ position: relative;
+ z-index: 2;
+ background-image: url("/static/pics/limited2.png");
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: cover;
+ float: right;
+ top: 0; right: -0.6rem;
+ width: 60px;
+ height: 60px;
+ margin-top: calc(-18rem);
+ opacity: 0.6;
+}
+
+#nwblk,
+#rwh,
+#lwh,
+#gurd {
+ display:none;
+}
+
+#narrow {
+ position: fixed;
+ z-index: 10;
+ right: 1.6rem; top: 1.5rem;
+ -webkit-transition: -webkit-transform .4s ease-in-out;
+ transition: transform .4s ease-in-out;  
+}
+#narrow:hover {
+ -webkit-transition: rotate(-2deg);
+ transform: rotate(-2deg);
+}
+#narrow .bbk {
+ text-decoration: line-through;
+}
+#nwblk {
+ z-index: 5;
+ top: 0;
+ background: rgba(7,0,0,0.9);
+ cursor:not-allowed;
+}
+
+.bak {
+ position: fixed;
+ z-index: 6;
+ cursor:default;
+ background-repeat: no-repeat;
+ background-position: top;
+ background-size: 100% 100%;
+ background-image: url('/static/pics/blck.png');
+}
+#rwh {
+ left: calc(50% + 7.25rem);
+ width: calc(50% - 7.25rem);
+ top: 0;
+ height: 84px;
+}
+#lwh {
+ position: fixed;
+ z-index: 6;
+ cursor:default;
+ left: 0;
+ width: calc(50% - 7.25rem);
+ bottom: 0;
+ height: 84px;
+}
+
+#lwh #rsbut {
+ position: fixed;
+ z-index: 7;
+ bottom: 1.6rem;
+ left: 1.5rem;
+ -webkit-transition: -webkit-transform .4s ease-in-out;
+ transition: transform .4s ease-in-out;  
+}
+#lwh #rsbut:hover {
+ -webkit-transition: rotate(2deg);
+ transform: rotate(2deg);
+}
+#gurd {
+ top: 84px; left: calc(50% - 7.25rem);
+ width: 14.5rem; height: calc(100vh - 168px);
+}
+
+#gurd .redb {
+ position: absolute;
+ z-index: 10;
+ bottom: 0;
+ width: 100%;
+ height: calc(100% - 260px);
+ -webkit-transition: rotate(180deg);
+ transform: rotate(180deg);
+}
+#gurd .redb .shd {
+  z-index: 11;
+  position: sticky;
+  background-image:
+  linear-gradient(to top, var(--r1), transparent);
+  width: 100%;
+  height: 100%;
+}
+
+#gurd form {
+ position: relative;
+ z-index: 17;
+ margin-top: 36px;
+ margin-left: 1.5rem;
+ margin-right: 1.5rem;
+}
+
+#gurd .bt2 {
+ position: absolute;
+ z-index: 14;
+ width: 100%;
+ bottom: 3rem; 
+ text-align: center;
+}
+#gurd .bt2 small {
+ color: var(--r1); 
+ font-size: 18px;
+ line-height: 5rem;
+}
+
+#gurd .bt2 #enter {
+ margin: 0 auto;
+ width: 5rem; height: 5rem;
+ border-radius: 50%;
+ border: 2px solid var(--r1); 
+ pointer-events: none;
+
+}
+#gurd .bt2 #enter.ent {
+ color: var(--whit); 
+ border: 2px solid var(--whit);
+ box-shadow: 0em 0em 3em #bbb, inset 0em 0em 3em #bbb, 1px 1px 5px #bbb, inset 0px 0px 10px #bbb;
+}
+#gurd .bt2 #enter.ent:hover {
+ color: var(--red4); 
+ box-shadow: 0em 0em 3em #ddd, inset 0em 0em 3em #ddd, 0em 0em 0.5rem #fff, inset 0px 0px 10px #ddd;
+}
+#gurd .bt2 #enter.ent:active {
+  box-shadow: 0em 0em 3em #bbb, inset 0em 0em 3em #bbb, 1px 1px 5px #bbb, inset 0px 0px 10px #bbb;
+}
+#gurd .ya {
+ font-size: 32px;
+ line-height: 40px;
+}
+
+
+/* CHECKBOX */
+
+
+.w0 {
+  width: 9.25rem;
+}
+
+.ck {
+  display: block;
+  position: relative;
+  padding-left: 2.4rem; 
+  margin: 6px 0; 
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: var(--whit); 
+ -webkit-transition: background 0.4s ease-out; 
+ transition: background 0.4s ease-out;
+}
+.ck:hover {
+ background: var(--r2); 
+}
+.ck .world {
+ font-size: 13px; line-height: 13px;
+}
+.ck input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.checkmark {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  height: 40px;
+  width: 28px;
+  background-color: var(--r2); 
+  -webkit-transition: background-color 0.6s ease-out;
+  transition: background-color 0.6s ease-out;
+}
+
+.ck:hover input ~ .checkmark {
+  background-color: var(--r2);  
+}
+
+.ck input:checked ~ .checkmark {
+  background-color: none; 
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.ck input:checked ~ .checkmark:after {
+  display: block;
+}
+.ck .checkmark:after {
+  left: 0.4rem;
+  top: 5px;
+  width: 0.6rem;
+  height: 1.2rem;
+  border: solid var(--whit); 
+  border-width: 0 4px 4px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.ck:hover input:checked ~ .checkmark:after {
+  border: solid var(--red0); 
+  border-width: 0 4px 4px 0;
+}
+
+/* DROPDOWN */
+.six {
+  z-index: 17;
+  position: relative;
+  text-align: center;
+}
+
+.sr {
+  cursor: pointer;
+  position: relative;
+  font-size: 13px;
+  line-height: 36px;
+  width: 11.5rem;
+  text-align: left;
+  text-indent: 10px;
+  margin: 0 auto;
+  margin-top: 32px;
+  color: var(--blck); 
+}
+.sr .d_s {
+  z-index: 0;
+  position: relative;
+  background: var(--r6); 
+  color: var(--whit); 
+  height: 32px;
+  line-height: 34px;
+}
+.sr .d_o {
+  display: none;
+  z-index: 1;
+  position: absolute;
+  background: var(--r6); 
+  color: var(--red1); 
+  top: 0rem;
+  left: 0;
+  right: 0;
+}
+.sr .d_p {
+  display: block;
+  height: 32px;
+  line-height: 34px;
+  width: 100%;
+}
+.sr .d_p:hover {
+  background: var(--r3); 
+  color: var(--whit); 
+}
+.sr .d_a {
+  position: absolute;
+  right: 8px;
+  top: 7px;
+  width: 1.2rem; height: 1.2rem;
+  background: url("../pics/arrowdownblack.png") no-repeat;
+  background-size: 1.2rem 1.2rem;
+}
+.sr .d_a.active {
+  background: url("../pics/dummy.png") no-repeat;
+  background-size: 1.1rem 1.1rem;
+}

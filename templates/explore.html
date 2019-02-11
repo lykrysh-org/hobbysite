@@ -1,0 +1,59 @@
+{% extends "index.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/static/css/show.css">
+    <link rel="stylesheet" href="/static/css/show_expl.css">
+    <link rel="stylesheet" href="/static/css/plyr.css">
+    <script type="text/javascript" defer src="/static/scripts/show.zombie"></script>
+    <script type="text/javascript" defer src="/static/scripts/explore.zombie"></script>
+    <script type="text/javascript" defer src="/static/scripts/vplayer263.zombie"></script>
+    <script type="text/javascript" defer src="/static/scripts/plyr.zombie"></script>{% endblock %}
+
+{% block topbody %}
+  <div class="bgscreen n" id="dummy"><small id="bugbug"></small></div>
+  <div class="bgscreen" id="showbox" data-url="/" data-sid=0></div>
+  <div class="n" id="narrow"><small><div class="but pc" id="narrowdown">Genres and Tastes</div></small></div> 
+  <div class="bgscreen" id="nwblk"></div>
+  <div id="rwh" class="bak"></div>
+  <div id="lwh" class="couch"><small><div class="but pc" id="rsbut">Reset to default</div></small></div>
+  <div id="gurd" class="bak">
+
+    <div class="bt2">
+      <small>
+         <div class="pc" id="enter">Enter</div>
+      </small>
+    </div>
+
+    <form id="dmF" class="nd1 ya n" action="/">
+      <label class="ck w0">Gore<input name="cat1" type="checkbox" {% if cat1 %}checked="checked"{% endif %}><span class="checkmark"></span></label>
+      <label class="ck w0">Creature<input name="cat2" type="checkbox" {% if cat2 %}checked="checked"{% endif %}><span class="checkmark"></span></label>
+      <label class="ck w0">Endof<span class="world">theworld<span><input name="cat3" type="checkbox" {% if cat3 %}checked="checked"{% endif %}><span class="checkmark"></span></label>
+      <label class="ck w0">Erotic<input name="cat4" type="checkbox" {% if cat4 %}checked="checked"{% endif %}"><span class="checkmark"></span></label>
+      <input type="hidden" id="sort" name="sort" value="{{ sort }}">
+    </form>
+    <div class="six">
+        <select id="srt">
+          <option {% if sort == 0 %}selected="selected"{% endif %}>Newly added</option>
+          <option {% if sort == 1 %}selected="selected"{% endif %}>Popular</option>
+          <option {% if sort == 2 %}selected="selected"{% endif %}>Latest creation</option>
+          <option {% if sort == 3 %}selected="selected"{% endif %}>Oldest creation</option>
+        </select>
+    </div>
+    <div class="redb couch"><div class="shd"></div></div>
+  </div>{% endblock %}
+
+{% block n0 %}
+          <span class="crs red2">Explore</span><br>
+          <a href="/talk">UrgentTalk</a><br>{% endblock %}
+
+{% block n1 %}
+          <a href="/about">About & Terms of use</a><br>
+          <a href="/contact">Contact</a>{% endblock %}
+
+{% block main %}
+    <div id="b" class="b">
+      <div class="z n">
+      </div>
+    </div>{% endblock %}
+
+{% block f %}{% endblock %}

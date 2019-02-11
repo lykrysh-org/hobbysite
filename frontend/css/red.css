@@ -1,0 +1,116 @@
+body {
+ background:var(--r1); 
+}
+
+#main {
+ width:  100%;
+ max-width: 640px;
+ margin: 0 auto;
+ text-align: center;
+}
+
+#main #red_t {
+ position: absolute;
+ z-index: 10;
+ width:  100%;
+ max-width: 640px;
+ min-height: 105vh;
+ margin: 0 auto;
+
+}
+
+.each {
+ margin-left: 1.5rem;
+ margin-right: 1.5rem;
+ border-top: 1px solid var(--r6); 
+ padding-top: 0.8rem;
+}
+
+#main .tell {
+ top: 84px;
+ padding-bottom: 84px;
+ text-align: left;
+}
+#main .tell .each {
+
+}
+#main .tell .each a {
+ color: var(--red1); 
+ text-decoration: underline;
+}
+#main .tell .each a:hover {
+ color: var(--whit); 
+}
+#main .tell .each ul {
+ list-style-type: square;
+ margin-top: 0px;
+ margin-bottom: 15px;
+}
+#main .tell .each ul li {
+ margin-left: -24px;
+}
+#main .tell .each small {
+ color: var(--red1); 
+}
+#main .tell .each .sm {
+ font-size: 16px;
+ color: var(--red0); 
+}
+#main .tell .each .sm a {
+ text-decoration: underline;
+ color: var(--red0); 
+}
+#main .tell .each .sm a:hover {
+ color: var(--red1); 
+}
+#main .tell .each small .red1 {
+ color: var(--red1); 
+}
+
+#main .hilt {
+  color: var(--whit); 
+  text-shadow: 0em 0em 3em #bbb, 0em 0em 2em #bbb, 1px 1px 5px #bbb, 0px 0px 15px #bbb;
+}
+#main .hilt:hover .r {
+  text-shadow: 0em 0em 3em #ccc, 0em 0em 2em #ccc, 1px 1px 5px #cccc00, 0px 0px 15px #ccc;
+}
+#main .hilt:hover .w {
+  text-shadow: 0em 0em 3em #ccc, 0em 0em 2em #ccc, 0em 0em 1em #fff, 1px 1px 5px #fff, 0px 0px 15px #ccc;
+}
+#main .email {
+ top: 84px;
+ text-align: left;
+}
+#main .email .each .whoami {
+ color: var(--red0); 
+}
+#main .email .each .whoami .red1 {
+  color: var(--red1); 
+}
+#main .email .each .tweet {
+ display: block;
+ margin-top: 36px;
+ opacity: 0.8;
+}
+#main .email .each .tweet:hover {
+ opacity: 1.0;
+}
+
+.l1 {
+  margin-top: 45px;
+  color: var(--whit); 
+  text-shadow: 0em 0em 3em #bbb, 0em 0em 2em #bbb, 1px 1px 5px #bbb, 0px 0px 15px #bbb;
+}
+.l1:hover {
+  text-shadow: 0em 0em 3em #ccc, 0em 0em 2em #ccc, 1px 1px 5px #ccc, 0px 0px 15px #ccc;
+}
+.l1:hover .w {
+  text-shadow: 0em 0em 3em #ccc, 0em 0em 2em #ccc, 0em 0em 1em #fff, 1px 1px 5px #fff, 0px 0px 15px #ccc;
+}
+.l1:hover .r {
+  text-shadow: 0em 0em 3em #ccc, 0em 0em 2em #ccc, 1px 1px 5px #cccc00, 0px 0px 15px #ccc;
+}
+.l1:hover .y {
+  text-shadow: 0em 0em 3em #ccc, 0em 0em 2em #ccc, 0em 0em 1em #ff66ff, 1px 1px 5px #ff66ff, 0px 0px 15px #ccc;
+}
+
