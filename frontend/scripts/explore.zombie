@@ -139,20 +139,33 @@ $(document).ready(function() {
             var host = data.mediahost.trim();
             var hostid = data.mediaid.trim();
             var ends = (data.ends > 0) ? data.ends : 1.25;
-            m.append('<div data-type=' + host + ' data-video-id='+ hostid + ' data-ends=' + ends + '></div>');
-            $.getScript('/static/scripts/show_movie.zombie', function( data, textStatus, jqxhr ) {
-              // this is your callback.
-            });
+
             switch (host) {
               case "vimeo":
+                m.append('<div data-type=' + host + ' data-video-id='+ hostid + ' data-ends=' + ends + '></div>');
+                $.getScript('/static/scripts/show_movie.zombie', function( data, textStatus, jqxhr ) {
+                  // this is your callback.
+                });
                 var cssLink = $('<link rel="stylesheet" type="text/css" href="/static/css/p-vimeo-only.css">');
                 m.append(cssLink); 
                 break;
               case "youtube":
+                m.append('<div data-type=' + host + ' data-video-id='+ hostid + ' data-ends=' + ends + '></div>');
+                $.getScript('/static/scripts/show_movie.zombie', function( data, textStatus, jqxhr ) {
+                  // this is your callback.
+                });
                 showbox.append('<div id="t3" class="ytblk"></div>');
                 var cssLink = $('<link rel="stylesheet" type="text/css" href="/static/css/p-yt-only.css">');
                 m.append(cssLink); 
                 m.append('<div id="t1" class="ytblk"></div><div id="t2" class="ytblk"></div>');
+                break;
+              case "mp4":
+                m.append('<video controls id="mp4plyr"><source src=' + hostid + ' type="video/mp4"></video>');
+                $.getScript('/static/scripts/show_movie.zombie', function( data, textStatus, jqxhr ) {
+                  // this is your callback.
+                });
+                var cssLink = $('<link rel="stylesheet" type="text/css" href="/static/css/p-mp4-only.css">');
+                m.append(cssLink); 
                 break;
               default:
             }

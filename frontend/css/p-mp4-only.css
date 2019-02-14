@@ -1,9 +1,12 @@
 #m {
  text-align: center;
+ margin-top: 200px;
 }
 
 #mp4plyr {
  height: 100%;
- width: 39rem;
+ width: 100%;
+ max-width: 640px;
  opacity: 1.0;
+
 }
