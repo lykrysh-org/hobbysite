@@ -225,10 +225,14 @@ function Ae(e,t){if(t){isNaN(e)&&(e=0),Ye.secs=parseInt(e%60),Ye.mins=parseInt(e
   //console.log(left);
   if (left  < d) {
     if (left < nds) {
-      document.querySelector(".plyr__video-embed iframe").style.opacity = 0.0;
+      if(!document.getElementById("mp4plyr")) {
+        document.querySelector(".plyr__video-embed iframe").style.opacity = 0.0; 
+      }
       document.querySelector(".plyr__play-large").style.opacity = 0.0;
     } else {
-      document.querySelector(".plyr__video-embed iframe").style.opacity = 1.0;
+      if(!document.getElementById("mp4plyr")) {
+        document.querySelector(".plyr__video-embed iframe").style.opacity = 1.0; 
+      }
       document.querySelector(".plyr__play-large").style.opacity = 1.0;
   }}
 

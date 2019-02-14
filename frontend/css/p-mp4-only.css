@@ -1,12 +1,10 @@
-#m {
+#showbox #m {
  text-align: center;
- margin-top: 200px;
 }
 
 #mp4plyr {
- height: 100%;
+ height: calc(100vh - 5rem);
  width: 100%;
  max-width: 640px;
  opacity: 1.0;
-
 }
